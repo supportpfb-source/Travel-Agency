@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zayd Travels | Umrah, Flights &amp; Visa Services — Pakistan</title>
+<meta name="description" content="Muhammad Zayd Travels — trusted IATA certified Umrah, flight ticketing and Saudi visa services from Pakistan. Your journey to the Holy Land, made easy.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --green-deep:#0f2e24;
+    --green-mid:#15442f;
+    --green-line: rgba(233,199,102,.25);
+    --gold:#c39a3e;
+    --gold-light:#e7c766;
+    --cream:#faf6ec;
+    --cream-2:#f2ead6;
+    --ink:#1c1b17;
+    --white:#ffffff;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Jost', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    font-weight:400;
+    line-height:1.65;
+  }
+  h1,h2,h3,h4, .display-font{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    color:var(--green-deep);
+    letter-spacing:.2px;
+  }
+  .section-eyebrow{
+    font-family:'Jost',sans-serif;
+    font-size:.78rem;
+    letter-spacing:.14em;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .section-title{
+    font-size:clamp(1.9rem, 3.2vw, 2.7rem);
+    margin-bottom:.35rem;
+  }
+  .section-sub{
+    color:#4d5a54;
+    max-width:640px;
+  }
+  .rule{
+    width:56px;height:3px;background:var(--gold);border-radius:2px;margin:14px 0 22px;
+  }
+  .rule.center{margin-left:auto;margin-right:auto;}
+
+  a{color:inherit;text-decoration:none;}
+
+  /* ---------- Top strip ---------- */
+  .topstrip{
+    background:var(--green-deep);
+    color:var(--cream-2);
+    font-size:.85rem;
+  }
+  .topstrip a{opacity:.9;}
+  .topstrip a:hover{color:var(--gold-light);}
+
+  /* ---------- Navbar ---------- */
+  .navbar-zayd{
+    background:var(--cream);
+    border-bottom:1px solid rgba(15,46,36,.1);
+    padding-top:.65rem;
+    padding-bottom:.65rem;
+  }
+  .navbar-zayd .navbar-brand img{
+    height:52px;width:52px;object-fit:cover;border-radius:50%;
+    border:2px solid var(--gold);
+  }
+  .navbar-zayd .brand-text .name{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:700;
+    font-size:1.35rem;
+    color:var(--green-deep);
+    line-height:1.1;
+  }
+  .navbar-zayd .brand-text .tag{
+    font-size:.68rem;
+    letter-spacing:.12em;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .navbar-zayd .nav-link{
+    color:var(--ink);
+    font-weight:500;
+    margin:0 .55rem;
+    position:relative;
+  }
+  .navbar-zayd .nav-link:hover{color:var(--green-deep);}
+  .navbar-zayd .nav-link::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);
+    transition:width .25s ease;
+  }
+  .navbar-zayd .nav-link:hover::after{width:100%;}
+  .btn-gold{
+    background:var(--gold);border:1px solid var(--gold);color:var(--green-deep);
+    font-weight:600; padding:.55rem 1.3rem; border-radius:2px;
+    transition:.2s ease;
+  }
+  .btn-gold:hover{background:transparent;color:var(--gold);border-color:var(--gold);}
+  .btn-outline-cream{
+    border:1px solid rgba(250,246,236,.55); color:var(--cream);
+    padding:.55rem 1.3rem; border-radius:2px; font-weight:500;
+    transition:.2s ease;
+  }
+  .btn-outline-cream:hover{background:rgba(250,246,236,.1); color:var(--gold-light); border-color:var(--gold-light);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:radial-gradient(ellipse at top right, #1c4a3b 0%, var(--green-deep) 60%);
+    color:var(--cream);
+    overflow:hidden;
+    padding:100px 0 90px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(231,199,102,.06) 0 1px, transparent 1px 90px);
+    pointer-events:none;
+  }
+  .hero-arch{
+    position:absolute; right:-60px; bottom:-40px; width:420px; opacity:.16;
+    pointer-events:none;
+  }
+  .hero .kicker{
+    color:var(--gold-light); letter-spacing:.18em; font-size:.78rem; font-weight:600;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(2.4rem, 5vw, 3.8rem);
+    line-height:1.08;
+    margin:.55rem 0 1rem;
+  }
+  .hero h1 em{
+    color:var(--gold-light); font-style:italic;
+  }
+  .hero p.lead{
+    color:rgba(250,246,236,.85);
+    max-width:560px;
+    font-size:1.08rem;
+  }
+  .trust-row{
+    display:flex; flex-wrap:wrap; gap:26px; margin-top:2.2rem;
+    border-top:1px solid rgba(231,199,102,.2); padding-top:1.4rem;
+  }
+  .trust-row .item{font-size:.85rem; color:rgba(250,246,236,.8); display:flex; align-items:center; gap:8px;}
+  .trust-row .item i{color:var(--gold-light);}
+
+  .hero-portrait{
+    position:relative; z-index:2;
+  }
+  .hero-portrait .frame{
+    border:1px solid var(--gold-light);
+    padding:14px;
+    background:rgba(250,246,236,.03);
+  }
+  .hero-portrait img{
+    width:100%; display:block;
+  }
+
+  /* ---------- Arch card ---------- */
+  .arch-card{
+    background:var(--white);
+    border:1px solid var(--gold-line, rgba(195,154,62,.35));
+    border-top:none;
+    border-radius:0 0 4px 4px;
+    padding:2.1rem 1.6rem 1.8rem;
+    height:100%;
+    text-align:center;
+    position:relative;
+  }
+  .arch-top{
+    width:100%;
+    height:56px;
+    background:var(--green-deep);
+    border-radius:120px 120px 0 0;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid rgba(195,154,62,.35);
+    border-bottom:none;
+  }
+  .arch-top i{color:var(--gold-light); font-size:1.5rem;}
+  .arch-card h3{font-size:1.28rem; margin:1rem 0 .5rem;}
+  .arch-card p{color:#5b655f; font-size:.94rem; margin-bottom:0;}
+
+  /* ---------- Ad / promo band ---------- */
+  .promo-band{
+    background:var(--cream-2);
+    border-top:1px solid rgba(15,46,36,.08);
+    border-bottom:1px solid rgba(15,46,36,.08);
+    padding:2.6rem 0;
+  }
+  .ad-slot{
+    border:1.5px dashed rgba(195,154,62,.55);
+    background:#fff;
+    border-radius:3px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:1.6rem 1rem;
+    min-height:150px;
+    color:#8a8074;
+  }
+  .ad-slot small{letter-spacing:.1em; font-size:.68rem; color:var(--gold);}
+  .ad-slot .ad-title{font-family:'Cormorant Garamond',serif; font-weight:600; font-size:1.15rem; color:var(--green-deep); margin-top:.3rem;}
+  #adCarousel{
+    border:1px solid rgba(195,154,62,.35);
+    border-radius:3px; overflow:hidden;
+  }
+  .ad-slide{
+    background:linear-gradient(120deg, var(--green-mid), var(--green-deep));
+    color:var(--cream);
+    min-height:150px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:1.6rem 1.2rem;
+  }
+  .ad-slide .tag{color:var(--gold-light); font-size:.72rem; letter-spacing:.14em; font-weight:600;}
+  .ad-slide h4{color:var(--white); margin:.35rem 0 .3rem; font-size:1.3rem;}
+  .ad-slide p{color:rgba(250,246,236,.8); font-size:.88rem; margin:0;}
+
+  /* ---------- Package cards ---------- */
+  .pkg-card{
+    background:var(--white);
+    border:1px solid rgba(15,46,36,.1);
+    border-top:4px solid var(--gold);
+    padding:1.9rem 1.7rem;
+    height:100%;
+    display:flex; flex-direction:column;
+  }
+  .pkg-card.featured{
+    border-top-color:var(--green-deep);
+    background:var(--green-deep);
+    color:var(--cream-2);
+  }
+  .pkg-card.featured h3, .pkg-card.featured .pkg-price{color:var(--white);}
+  .pkg-card.featured ul li{color:rgba(250,246,236,.85);}
+  .pkg-card.featured .pkg-note{color:var(--gold-light);}
+  .pkg-badge{
+    align-self:flex-start;
+    font-size:.68rem; letter-spacing:.1em; font-weight:600;
+    color:var(--gold); border:1px solid var(--gold); padding:.2rem .6rem; border-radius:20px;
+    margin-bottom:.9rem;
+  }
+  .pkg-card h3{font-size:1.35rem; margin-bottom:.2rem;}
+  .pkg-loc{font-size:.85rem; color:var(--gold); margin-bottom:1rem;}
+  .pkg-price{
+    font-family:'Cormorant Garamond', serif; font-weight:700; font-size:1.9rem; color:var(--green-deep);
+    margin:.2rem 0 1rem;
+  }
+  .pkg-price span{font-size:.9rem; font-weight:500; font-family:'Jost',sans-serif; color:#6d766f;}
+  .pkg-card ul{list-style:none; padding:0; margin:0 0 1.3rem; flex-grow:1;}
+  .pkg-card ul li{
+    font-size:.92rem; padding:.35rem 0; border-bottom:1px dashed rgba(15,46,36,.12);
+    display:flex; gap:.55rem; align-items:flex-start; color:#3c443f;
+  }
+  .pkg-card.featured ul li{border-bottom:1px dashed rgba(231,199,102,.22);}
+  .pkg-card ul li i{color:var(--gold); margin-top:.25rem;}
+  .pkg-note{font-size:.78rem; color:#8a8074; margin-bottom:1.1rem; font-style:italic;}
+
+  /* ---------- Why us ---------- */
+  .why-item{display:flex; gap:1rem; padding:1.1rem 0; border-bottom:1px solid rgba(15,46,36,.08);}
+  .why-item:last-child{border-bottom:none;}
+  .why-item .ico{
+    width:44px;height:44px;flex:none;border-radius:50%;
+    background:var(--green-deep); color:var(--gold-light);
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem;
+  }
+  .why-item h5{font-family:'Cormorant Garamond',serif; font-weight:700; margin-bottom:.2rem; color:var(--green-deep); font-size:1.15rem;}
+  .why-item p{margin:0; color:#5b655f; font-size:.92rem;}
+
+  /* steps */
+  .step{
+    text-align:center; padding:0 1rem;
+  }
+  .step .num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.6rem; font-weight:700; color:var(--gold);
+    line-height:1;
+  }
+  .step h5{margin:.5rem 0 .3rem;}
+  .step p{color:#5b655f; font-size:.9rem;}
+
+  /* ---------- Contact ---------- */
+  .contact-sec{
+    background:var(--green-deep); color:var(--cream-2);
+    padding:70px 0;
+    position:relative;
+  }
+  .contact-card{
+    background:rgba(250,246,236,.05);
+    border:1px solid rgba(231,199,102,.25);
+    padding:1.6rem 1.4rem;
+    height:100%;
+  }
+  .contact-card i{color:var(--gold-light); font-size:1.4rem; margin-bottom:.6rem;}
+  .contact-card h5{color:var(--white); font-family:'Cormorant Garamond',serif; font-weight:700; margin-bottom:.35rem;}
+  .contact-card a, .contact-card p{color:rgba(250,246,236,.82); font-size:.93rem; margin:0;}
+  .contact-card a:hover{color:var(--gold-light);}
+
+  .form-control, .form-select{
+    background:transparent; border:1px solid rgba(231,199,102,.35); color:var(--cream);
+    border-radius:2px; padding:.7rem .9rem;
+  }
+  .form-control::placeholder{color:rgba(250,246,236,.5);}
+  .form-control:focus, .form-select:focus{
+    background:transparent; color:var(--cream); border-color:var(--gold-light);
+    box-shadow:0 0 0 .15rem rgba(231,199,102,.2);
+  }
+  .form-select option{color:#111;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:#0b241c; color:rgba(250,246,236,.65); padding:38px 0 18px; font-size:.88rem;
+  }
+  footer a{color:rgba(250,246,236,.65);}
+  footer a:hover{color:var(--gold-light);}
+  .footer-logo img{height:40px;width:40px;border-radius:50%;border:1px solid var(--gold);}
+
+  /* ---------- WhatsApp float ---------- */
+  .wa-float{
+    position:fixed; right:22px; bottom:22px; z-index:1000;
+    width:56px;height:56px;border-radius:50%;
+    background:#1f9e56; color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem; box-shadow:0 8px 20px rgba(0,0,0,.25);
+    transition:.2s ease;
+  }
+  .wa-float:hover{transform:translateY(-3px); color:#fff;}
+
+  @media (max-width:991px){
+    .hero{padding:70px 0 60px; text-align:center;}
+    .trust-row{justify-content:center;}
+    .hero-portrait{margin-top:2.5rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Top strip ===== -->
+<div class="topstrip py-2">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <div class="d-flex gap-3">
+      <a href="tel:+923282857385"><i class="bi bi-telephone-fill me-1"></i>0328 2857385</a>
+      <a href="mailto:zaydtravels@gmail.com" class="d-none d-sm-inline"><i class="bi bi-envelope-fill me-1"></i>zaydtravels@gmail.com</a>
+    </div>
+    <div class="d-flex gap-3 align-items-center">
+      <span><i class="bi bi-geo-alt-fill me-1"></i>Pakistan</span>
+      <a href="https://wa.me/923282857385" target="_blank"><i class="bi bi-whatsapp me-1"></i>WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg navbar-zayd sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+      <img src="assets/zayd-logo.jpg" alt="Zayd Travels logo">
+      <span class="brand-text">
+        <span class="name d-block">Zayd Travels</span>
+        <span class="tag">UMRAH &amp; TRAVEL SERVICES</span>
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#packages">Deals &amp; Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a class="btn btn-gold" href="https://wa.me/923282857385" target="_blank">
+            <i class="bi bi-whatsapp me-1"></i> Get a Quote
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero" id="top">
+  <svg class="hero-arch" viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 260V120C20 60 60 10 100 10C140 10 180 60 180 120V260" stroke="#e7c766" stroke-width="1.2"/>
+    <path d="M45 260V130C45 82 70 45 100 45C130 45 155 82 155 130V260" stroke="#e7c766" stroke-width="1"/>
+  </svg>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="kicker">MUHAMMAD ZAYD TRAVELS · PAKISTAN</div>
+        <h1>Your Journey to the <em>Holy Land</em>, Made Easy</h1>
+        <p class="lead">IATA certified Umrah, flight ticketing and Saudi visa services — best fares, custom Economy &amp; Star packages, and complete guidance from Pakistan to Makkah &amp; Madina.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="https://wa.me/923282857385" target="_blank" class="btn btn-gold"><i class="bi bi-whatsapp me-1"></i> Chat on WhatsApp</a>
+          <a href="#packages" class="btn btn-outline-cream">View Packages</a>
+        </div>
+        <div class="trust-row">
+          <div class="item"><i class="bi bi-patch-check-fill"></i> IATA Certified Agency</div>
+          <div class="item"><i class="bi bi-airplane-fill"></i> Full Transport, Visa &amp; Accommodation</div>
+          <div class="item"><i class="bi bi-headset"></i> Professional Guidance</div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-portrait">
+          <div class="frame">
+            <img src="assets/zayd-logo.jpg" alt="Zayd Travels — Umrah and Travel Services">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Services ===== -->
+<section id="services" class="py-5 py-lg-6" style="padding-top:80px;padding-bottom:70px;">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width:600px;">
+      <div class="section-eyebrow">WHAT WE OFFER</div>
+      <h2 class="section-title">Our Services</h2>
+      <div class="rule center"></div>
+      <p class="section-sub mx-auto">Everything you need for a smooth, worry-free journey — from Umrah to international travel.</p>
+    </div>
+
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="arch-top"><i class="bi bi-building"></i></div>
+        <div class="arch-card">
+          <h3>Umrah Packages</h3>
+          <p>Custom Economy and Star Umrah packages with full transport, visa and accommodation arranged for you.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="arch-top"><i class="bi bi-airplane-engines"></i></div>
+        <div class="arch-card">
+          <h3>Flight Tickets</h3>
+          <p>Best available domestic and international fares, booked and confirmed with clear, honest pricing.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="arch-top"><i class="bi bi-passport"></i></div>
+        <div class="arch-card">
+          <h3>Visa Services</h3>
+          <p>Umrah, work and travel visa processing — including Saudi work visas — handled start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ad / Promo band ===== -->
+<section class="promo-band">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7">
+        <div id="adCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+              <div class="ad-slide">
+                <span class="tag">FEATURED OFFER</span>
+                <h4>Saudi Visa — Construction Helper</h4>
+                <p>2-year Dammam agreement · Visa, ticket &amp; protector included · Ask us for full details</p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="ad-slide">
+                <span class="tag">UMRAH SPECIAL</span>
+                <h4>Star Package Umrah Deals</h4>
+                <p>Premium stays close to Haram — message us on WhatsApp for this month's rates</p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="ad-slide">
+                <span class="tag">TRUSTED SERVICE</span>
+                <h4>IATA Certified Travel Agency</h4>
+                <p>Complete guidance, honest fares and full support before, during and after travel</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#adCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#adCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="ad-slot h-100">
+          <small>ADVERTISEMENT SPACE</small>
+          <div class="ad-title">Your Ad / Sponsor Banner Here</div>
+          <div class="mt-1" style="font-size:.85rem;">Reserved slot for commercial banners &amp; partner promotions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Deals & Packages ===== -->
+<section id="packages" class="py-5" style="padding-top:80px;padding-bottom:80px;">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width:600px;">
+      <div class="section-eyebrow">DEALS &amp; PACKAGES</div>
+      <h2 class="section-title">Choose Your Package</h2>
+      <div class="rule center"></div>
+      <p class="section-sub mx-auto">Transparent pricing, no hidden costs. Message us for the latest available dates and rates.</p>
+    </div>
+
+    <div class="row g-4 mt-3">
+      <!-- Economy Umrah -->
+      <div class="col-lg-4">
+        <div class="pkg-card">
+          <span class="pkg-badge">UMRAH</span>
+          <h3>Economy Umrah Package</h3>
+          <div class="pkg-loc"><i class="bi bi-geo-alt-fill"></i> Makkah &amp; Madina</div>
+          <div class="pkg-price">Best Rates <span>/ contact us</span></div>
+          <ul>
+            <li><i class="bi bi-check2"></i> Umrah visa processing</li>
+            <li><i class="bi bi-check2"></i> Return flight ticket</li>
+            <li><i class="bi bi-check2"></i> Comfortable shared accommodation</li>
+            <li><i class="bi bi-check2"></i> Local transport included</li>
+          </ul>
+          <div class="pkg-note">Ideal for budget-conscious pilgrims travelling in a group.</div>
+          <a href="https://wa.me/923282857385?text=I'm%20interested%20in%20the%20Economy%20Umrah%20Package" target="_blank" class="btn btn-gold w-100">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Star Umrah -->
+      <div class="col-lg-4">
+        <div class="pkg-card">
+          <span class="pkg-badge">UMRAH</span>
+          <h3>Star Umrah Package</h3>
+          <div class="pkg-loc"><i class="bi bi-geo-alt-fill"></i> Makkah &amp; Madina</div>
+          <div class="pkg-price">Premium Rates <span>/ contact us</span></div>
+          <ul>
+            <li><i class="bi bi-check2"></i> Umrah visa processing</li>
+            <li><i class="bi bi-check2"></i> Return flight ticket</li>
+            <li><i class="bi bi-check2"></i> Hotels close to the Haram</li>
+            <li><i class="bi bi-check2"></i> Private transport &amp; guided ziyarat</li>
+          </ul>
+          <div class="pkg-note">A more comfortable, closer-to-Haram travel experience.</div>
+          <a href="https://wa.me/923282857385?text=I'm%20interested%20in%20the%20Star%20Umrah%20Package" target="_blank" class="btn btn-gold w-100">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Saudi Visa Construction Helper -->
+      <div class="col-lg-4">
+        <div class="pkg-card featured">
+          <span class="pkg-badge" style="color:var(--gold-light); border-color:var(--gold-light);">WORK VISA</span>
+          <h3>Saudi Visa — Construction Helper</h3>
+          <div class="pkg-loc" style="color:var(--gold-light);"><i class="bi bi-geo-alt-fill"></i> Company: Dammam · Work site: Madina</div>
+          <div class="pkg-price">PKR 370,000</div>
+          <ul>
+            <li><i class="bi bi-check2"></i> 2-year work agreement</li>
+            <li><i class="bi bi-check2"></i> Salary: 1,000 SAR + accommodation + food</li>
+            <li><i class="bi bi-check2"></i> Visa included</li>
+            <li><i class="bi bi-check2"></i> Protector included</li>
+            <li><i class="bi bi-check2"></i> Ticket included</li>
+          </ul>
+          <div class="pkg-note">Note: Medical, Navttac &amp; clearance charges are not included.</div>
+          <a href="https://wa.me/923282857385?text=I'm%20interested%20in%20the%20Saudi%20Visa%20Construction%20Helper%20package" target="_blank" class="btn btn-gold w-100">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why choose us ===== -->
+<section id="why" class="py-5" style="background:var(--cream-2); padding-top:80px; padding-bottom:80px;">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5">
+        <div class="section-eyebrow">WHY CONTACT US</div>
+        <h2 class="section-title">Benefits of Travelling With Us</h2>
+        <div class="rule"></div>
+        <p class="section-sub">A trusted, IATA certified agency guiding you at every step of your journey — from booking to boarding.</p>
+
+        <div class="mt-4">
+          <div class="row g-3">
+            <div class="step col-4">
+              <div class="num">01</div>
+              <h5>Contact Us</h5>
+              <p>Message or call to share your travel plan.</p>
+            </div>
+            <div class="step col-4">
+              <div class="num">02</div>
+              <h5>Choose a Plan</h5>
+              <p>Pick an Economy, Star or Visa package.</p>
+            </div>
+            <div class="step col-4">
+              <div class="num">03</div>
+              <h5>Travel</h5>
+              <p>We handle the rest — visa to arrival.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="why-item">
+          <div class="ico"><i class="bi bi-tags-fill"></i></div>
+          <div><h5>Behtareen Fares</h5><p>Best available fares on Umrah and international travel bookings.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><i class="bi bi-sliders"></i></div>
+          <div><h5>Custom Travel Plans</h5><p>Mukhtalif custom travel plans with Economy and Star packages to suit your budget.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><i class="bi bi-patch-check-fill"></i></div>
+          <div><h5>Trusted &amp; IATA Certified</h5><p>A trusted, IATA certified travel agency operating across Pakistan.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><i class="bi bi-headset"></i></div>
+          <div><h5>Professional Guidance</h5><p>Complete, professional service and guidance at every step of your trip.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><i class="bi bi-globe-asia-australia"></i></div>
+          <div><h5>Best for Umrah &amp; International Travel</h5><p>The right partner for Umrah as well as international travel needs.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><i class="bi bi-bus-front-fill"></i></div>
+          <div><h5>Full Transport, Visa &amp; Accommodation</h5><p>Everything arranged for you — transport, visa and stay, all in one place.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="contact-sec">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width:600px;">
+      <div class="section-eyebrow" style="color:var(--gold-light);">GET IN TOUCH</div>
+      <h2 class="section-title" style="color:var(--white);">Contact Us</h2>
+      <div class="rule center"></div>
+      <p style="color:rgba(250,246,236,.75);">Abhi contact karein — safar ko sukoon bhara, banain hamaray sath.</p>
+    </div>
+
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="contact-card text-center">
+          <i class="bi bi-telephone-fill"></i>
+          <h5>Call / WhatsApp</h5>
+          <a href="tel:+923282857385">0328 2857385</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card text-center">
+          <i class="bi bi-envelope-fill"></i>
+          <h5>Email</h5>
+          <a href="mailto:zaydtravels@gmail.com">zaydtravels@gmail.com</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card text-center">
+          <i class="bi bi-geo-alt-fill"></i>
+          <h5>Location</h5>
+          <p>Pakistan</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto">
+        <div class="contact-card">
+          <h5 class="mb-3 text-center">Send Us a Quick Message</h5>
+          <form onsubmit="event.preventDefault(); const n=document.getElementById('cname').value; const m=document.getElementById('cmsg').value; window.open('https://wa.me/923282857385?text='+encodeURIComponent('Name: '+n+'\n'+m),'_blank');">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" id="cname" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="tel" class="form-control" placeholder="Phone Number" required>
+              </div>
+              <div class="col-12">
+                <select class="form-select">
+                  <option selected>I'm interested in…</option>
+                  <option>Economy Umrah Package</option>
+                  <option>Star Umrah Package</option>
+                  <option>Saudi Visa — Construction Helper</option>
+                  <option>Flight Ticket</option>
+                  <option>Other Visa Service</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <textarea id="cmsg" class="form-control" rows="3" placeholder="Tell us about your travel plan"></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-gold px-4"><i class="bi bi-whatsapp me-1"></i> Send via WhatsApp</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-4 footer-logo d-flex align-items-center gap-2">
+        <img src="assets/zayd-logo.jpg" alt="Zayd Travels">
+        <div>
+          <div style="color:var(--cream); font-family:'Cormorant Garamond',serif; font-weight:700;">Zayd Travels</div>
+          <div style="font-size:.75rem;">Umrah &amp; Travel Services</div>
+        </div>
+      </div>
+      <div class="col-md-4 text-md-center">
+        <a href="#services">Services</a> &nbsp;·&nbsp;
+        <a href="#packages">Packages</a> &nbsp;·&nbsp;
+        <a href="#why">Why Us</a> &nbsp;·&nbsp;
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="col-md-4 text-md-end d-flex justify-content-md-end gap-3">
+        <a href="https://wa.me/923282857385" target="_blank"><i class="bi bi-whatsapp fs-5"></i></a>
+        <a href="mailto:zaydtravels@gmail.com"><i class="bi bi-envelope-fill fs-5"></i></a>
+        <a href="tel:+923282857385"><i class="bi bi-telephone-fill fs-5"></i></a>
+      </div>
+    </div>
+    <hr style="border-color:rgba(250,246,236,.12); margin:24px 0 14px;">
+    <div class="text-center" style="font-size:.8rem;">© 2026 Muhammad Zayd Travels. All rights reserved.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923282857385" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
